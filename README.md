@@ -10,7 +10,7 @@ Encuentra aqui el [markup](https://raw.githubusercontent.com/israel-altamira/isr
 
 ### Javascript ES5
 1. tipos de primitivas en js-es5 [goto->](http://israel-altamira.github.io/sample.html)
-
+[goto->](https://raw.githubusercontent.com/israel-altamira/5_js/master/1_primitivas.html)
 ### Javascript ES6
 1. Como hacer un if [go->]
 
