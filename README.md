@@ -14,6 +14,8 @@ El sitio tiene como objetivo explorar el lenguage javascript (y otros como java)
 ### Javascript ES6
 1. Como hacer un if [go->]
 
+### Screenshots de proximas aplicaciones:
+1. Sistema de Administracion de Personal - modulo de vacaciones (vacations_admin.html)
 
 Gracias! Bon appetit!
 
