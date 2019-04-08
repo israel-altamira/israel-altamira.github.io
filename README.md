@@ -9,7 +9,7 @@ El sitio tiene como objetivo explorar el lenguage javascript (y otros como java)
 ### Javascript ES5
 1. tipos de primitivas en js-es5 <br>
 [goto-> sample.html](http://israel-altamira.github.io/sample.html) in this repo or<br>
-[goto-> primitivas.html](https://raw.githubusercontent.com/israel-altamira/5_js/master/1_primitivas.html) in another repo <br>
+[goto-> primitivas.html](https://raw.githubusercontent.com/israel-altamira/5_js/master/1%20primitivas/1_primitivas.html) in another repo <br>
 
 ### Javascript ES6
 1. Como hacer un if [go->]
