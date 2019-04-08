@@ -7,9 +7,9 @@ El sitio tiene como objetivo explorar el lenguage javascript (y otros como java)
 1. Como hacer un if
 
 ### Javascript ES5
-1. tipos de primitivas en js-es5 
-[goto->](http://israel-altamira.github.io/sample.html)
-[goto->](https://raw.githubusercontent.com/israel-altamira/5_js/master/1_primitivas.html)
+1. tipos de primitivas en js-es5 <br>
+[goto-> sample.html](http://israel-altamira.github.io/sample.html) in this repo or<br>
+[goto-> primitivas.html](https://raw.githubusercontent.com/israel-altamira/5_js/master/1_primitivas.html) in another repo <br>
 
 ### Javascript ES6
 1. Como hacer un if [go->]
@@ -19,5 +19,5 @@ Gracias! Bon appetit!
 
 --------------------------------------------------------------------------------
 
-[markup raw text](https://raw.githubusercontent.com/israel-altamira/israel-altamira.github.io/master/markdown-sample.md)
-[markup styled page](markdown-sample.md) original que venia en el readme.md de github por primera vez en este sitio.
+markup raw text - https://raw.githubusercontent.com/israel-altamira/israel-altamira.github.io/master/markdown-sample.md <br>
+[markup styled page](markdown-sample.md) - markdown-sample.md<br>
