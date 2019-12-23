@@ -6,10 +6,10 @@
       .t-border {
         border: 1px solid black;
       }
-      .t-edit.fas {
+      .t-edit .fas {
         display: none;
       }
-      .t-edit:hover.fas {
+      .t-edit:hover .fas {
         display: block;
       }
       .t-talign-l {
@@ -212,15 +212,48 @@
     <li>angular - ligar el formulario ,con las nuevas fechas, a un modelo para que cada cambio se refleje ahi</li>
     <li>angular - boton "agregar dias" actualiza el store de los nuevos dias que el empleado tomara y manda la info al SERVICIO java</li>
   </ul>
-	  
-	  <br>
-	  
-	Servicios	  
+
+	<br>
+
+	Servicios
 	<ul>
 		<li>servicio para autenticar usuario</li>
 		<li>servicio para buscar un empleado</li>
 		<li>servicio para obtener el detalle de un empleado</li>
 	</ul>
-	  
+
+	<div>----------------------------------------------------------------------------------------------------</div> <br>
+
+	<div>
+	public boolean isValidUser(string userId, string password);	<br>
+	public List<Employee> searchEmployee(string query);	<br>
+	public Employee getEmployee(string employeeId);	<br>
+	public List<DiasTomados> getDaysBurned(string employeeId);	<br>
+
+	donde:
+		Employee{
+			id: number, 
+			nombre: string, 
+			vacaciones: Dias
+		}
+		
+		Dias {
+			fechaInicio: date
+			fechaFinal: date
+			status: "vigentes" | "vencidas",
+			total: number,
+			tomados: number
+		}
+		
+		DiasTomados {
+			employeeId: number,
+			concepto: "Paternidad" | "Vacaciones" | "Maternidad" | "Otro"
+			fechaInicio: date
+			fechaFinal: date
+			status: "Aprobado" | "PorAprobarse"
+		}
+	</div>
+		
+	
   </body>
 </html>
