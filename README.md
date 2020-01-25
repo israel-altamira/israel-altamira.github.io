@@ -15,7 +15,7 @@ El sitio tiene como objetivo explorar el lenguage javascript (y otros como java)
 1. Como hacer un if [go->]
 
 ### Screenshots de proximas aplicaciones:
-1. [Sistema de Administracion de Personal](vacations_admin.html) - modulo de vacaciones 
+1. [Sistema de Administracion de Personal](./sysvac/login.html) - modulo de vacaciones 
 
 Gracias! Bon appetit!
 

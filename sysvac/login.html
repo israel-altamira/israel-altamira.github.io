@@ -14,10 +14,96 @@
 <body>
 
   <br>
-  Usuario: <input type="text" value="luz.calzada" /> <br>
-  Password: <input type="password" value="luz.calzada" /> <br>
-  Entrar <input type="submit" />
+  Usuario: <input type="text" value="luz.calzada" />
   <br>
+  <br>
+  Password: <input type="password" value="luz.calzada" />
+  <br>
+  <br>
+  Entrar <input type="submit" onclick="window.location='./busqueda.html'"/>
+  <br>
+  <br>
+
+  <div>------------------------------------------------------------------------------------------</div> 
+
+  <br>
+  <br>
+  <br>
+  <br>
+  Objetivos
+  <li> aprender java8. por lo anterior hacer lo mas que se pueda del lado de backend. </li>
+  <li> y el minimo posible con angular [cambio de vistas, mostrar listas de nombres] </li>
+
+  <br>
+
+  Historial
+  <ul>
+    <li>18/12/2019 10am 2hrs - la tabla q muestra los datos mas recientes debe tener tambien la forma para meter mas dias</li>
+    <li>18/12/2019 10am 2hrs - completar bosquejo/prototipo - update a los estilos de la tabla de resultados de busqueda</li>
+    <li>NOTA: no usar NgRx, por que el objetivo es estar usando los servicio java</li>
+    <li>20/12/2019 10am 6hrs - completar bosquejo - update a los estilos de la pagina de valores actuales. cambios en el layout.</li>
+    <li>23/12/2019 9am 4hrs - hice firmas de los servicios para java y objetos de respuesta</li>
+  </ul>
+
+    <br>
+
+  User Stories / Requerimientos
+  <ul>
+    <li>angular [LOGIN] - usar ng-router, navegacion entre pantallas</li>
+    <li>angular [LOGIN] - llamada a SERVICIO para autenticacion del usuario</li>
+    <li>angular [LOGIN] - Un usuario autenticado es dirigido a la siguente vista usando ng-router</li>
+    <li>angular [LOGIN] - detectar si el usuario esta logueado al acceder a la URL directamente, si no, mostrar componente de logueo</li>
+    <li>java [SERVICIOS] - llamadas al SERVICIO de busqueda cada vez q se pone una letra en la caja de busqueda // SERVICIO JAVA</li>
+    <li>angular - componente - mostrar lista (mock) de nombres como resultado de busqueda (basado en observable)</li>
+    <li>java [SERVICIOS] - componente - obtener lista de nombres al llamar al SERVICIO de busqueda</li>
+    <li>angular - el componente anterior te muestra un boton para ir al detalle del empleado</li>
+    <li>angular - el boton "ver" te deja ver el detalle de un empleado</li>
+    <li>angular - llamar al SERVICIO para el detalle de un empleado</li>
+    <li>java [SERVICIOS] - SERVICIO para el detalle de un empleado</li>
+    <li>angular - ligar el formulario ,con las nuevas fechas, a un modelo para que cada cambio se refleje ahi</li>
+    <li>angular - boton "agregar dias" actualiza el store de los nuevos dias que el empleado tomara y manda la info al SERVICIO java</li>
+  </ul>
+
+  <br>
+
+  Servicios
+  <ul>
+    <li>servicio para autenticar usuario</li>
+    <li>servicio para buscar un empleado</li>
+    <li>servicio para obtener el detalle de un empleado</li>
+  </ul>
+
+  <div>----------------------------------------------------------------------------------------------------</div> <br>
+
+  <pre>
+  public boolean isValidUser(string userId, string password); 
+  public List<Employee> searchEmployee(string query); 
+  public Employee getEmployee(string employeeId); 
+  public List<DiasTomados> getDaysBurned(string employeeId);  
+
+  donde:
+    Employee{
+      id: number, 
+      nombre: string, 
+      vacaciones: Dias
+    }
+    
+    Dias {
+      fechaInicio: date
+      fechaFinal: date
+      status: "vigentes" | "vencidas",
+      total: number,
+      tomados: number
+    }
+    
+    DiasTomados {
+      employeeId: number,
+      concepto: "Paternidad" | "Vacaciones" | "Maternidad" | "Otro"
+      fechaInicio: date
+      fechaFinal: date
+      status: "Aprobado" | "PorAprobarse"
+    }
+  </pre>
 
 </body>
 </html>
