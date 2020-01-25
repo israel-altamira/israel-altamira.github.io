@@ -11,16 +11,32 @@
   text-align: left;
 }
 
-.w-300 {
-  width: 300px; 
-}
-.w-200 {
-  width: 200px; 
+
+.w-100 {
+  width: 100%; 
 }
 .w-50 {
-  width: 50px; 
+  width: 50%; 
+}
+.w-30 {
+  width: 30%; 
+}
+.w-5 {
+  width: 5%; 
 }
 
 .flex {
   display: flex;
+}
+.f-col{
+  flex-direction: column;
+}
+.f-justify-space-between {
+  justify-content: space-between;
+}
+.f-justify-center {
+  justify-content: center;
+}
+.f-align-items-center {
+  align-items: center;
 }
