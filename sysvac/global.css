@@ -7,10 +7,12 @@
 .t-edit:hover .fas {
   display: block;
 }
-.t-talign-l {
+.t-txt-align-l {
   text-align: left;
 }
-
+.t-txt-align-r {
+  text-align: right;
+}
 
 .w-100 {
   width: 100%; 
@@ -21,12 +23,19 @@
 .w-30 {
   width: 30%; 
 }
+.w-20 {
+  width: 20%; 
+}
+.w-15 {
+  width: 15%; 
+}
 .w-5 {
   width: 5%; 
 }
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
 }
 .f-col{
   flex-direction: column;
