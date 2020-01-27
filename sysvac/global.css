@@ -1,10 +1,10 @@
 .t-border {
   border: 1px solid black;
 }
-.t-edit .fas {
+.t-edit fas {
   display: none;
 }
-.t-edit:hover .fas {
+.t-edit:hover fas {
   display: block;
 }
 .t-txt-align-l {
@@ -36,6 +36,7 @@
 .flex {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 .f-col{
   flex-direction: column;
