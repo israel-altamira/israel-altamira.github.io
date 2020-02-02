@@ -19,7 +19,7 @@ El sitio tiene como objetivo explorar el lenguage javascript (y otros como java)
 
 ### Maquetas de proximas aplicaciones:
 1. [Sistema de Administracion de Personal](./sysvac/login.html) - modulo de vacaciones 
-2. [Aplicacion que calcula PI](https://raw.githubusercontent.com/israel-altamira/5_js/master/1%20primitivas/1_primitivas.html) mediante aproximaciones con los perimetros de un poligono
+2. [Aplicacion que calcula PI](https://raw.githubusercontent.com/israel-altamira/8_math/matematicas/math/src/app/app.component.ts) mediante aproximaciones con los perimetros de un poligono
 
 Gracias! Bon appetit!
 
