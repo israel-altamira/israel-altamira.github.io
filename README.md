@@ -13,9 +13,13 @@ El sitio tiene como objetivo explorar el lenguage javascript (y otros como java)
 
 ### Javascript ES6
 1. Como hacer un if [go->]
+2. Como funciona un timeout
+3. Como funciona un setInterval
+4. Que es un observable
 
-### Screenshots de proximas aplicaciones:
+### Maquetas de proximas aplicaciones:
 1. [Sistema de Administracion de Personal](./sysvac/login.html) - modulo de vacaciones 
+2. [Aplicacion que calcula PI](https://raw.githubusercontent.com/israel-altamira/5_js/master/1%20primitivas/1_primitivas.html) mediante aproximaciones con los perimetros de un poligono
 
 Gracias! Bon appetit!
 
