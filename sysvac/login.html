@@ -40,82 +40,146 @@
   <ul>
     <li>18/12/2019 10am 2hrs - la tabla q muestra los datos mas recientes debe tener tambien la forma para meter mas dias</li>
     <li>18/12/2019 10am 2hrs - completar bosquejo/prototipo - update a los estilos de la tabla de resultados de busqueda</li>
+    <li>Nota: todo enero estudiando microservicios en udemy, a ratos. 4 semanas x 5 dias.</li>
     <li>NOTA: no usar NgRx, por que el objetivo es estar usando los servicio java</li>
     <li>20/12/2019 10am 6hrs - completar bosquejo - update a los estilos de la pagina de valores actuales. cambios en el layout.</li>
     <li>23/12/2019 9am 4hrs - hice firmas de los servicios para java y objetos de respuesta</li>
     <li>24/01/2020 8:00pm 2hrs reorganice toda la maqueta en github.io</li>
     <li>24/01/2020 22:00 8hrs buscar los iconos para el menu principal (3 vistas)</li>
     <li>24/01/2020 22:00 8hrs hice la 1er vista ( donde se muestra la lista de empleados).</li>
+    <li></li>
     <li>27/01/2020 10:00 2hrs segui con la vista de las constantes fiscales</li>
     <li>27/01/2020 12:00 2hrs consegui los iconos de flaticon.com en lugar de fontawesome</li>
     <li>27/01/2020 13:00 1hrs acabe de meter los datos fake</li>
+    <li>27/01/2020 quitar fontawesome </li>
+    <li></li>
+    <li>01/02/2019  6hrs - hice diseño de la base de datos</li>
+    <li>01/02/2019 - volvi a hacer notas sobre los componentes angular</li> 
+    <li>01/02/2019 - detalle los signatures de los servicios java</li>
+    <li>01/02/2019 - cree los inserts</li>
+    <li>01/02/2019 - la tabla de constantes se dividio, por que visualmente se ocupa asi</li>
+    <li>01/02/2019 - 10:00pm 6hrs - corregir los inserts</li>
+    <li>01/02/2019 - hacer 1 microservicio para obtener datos del empleado</li>
+    <li></li>
+    <li>03/02/2019 - volver a recordar el capitulo basico de microservicios-eureka-zul-spring-config</li>
 
-    <li>1.html, botones</li>
-    <li>Pagina Mod, alinear tablas, poner iconos en tabla-editar/guardar/borrar</li>
-    quitar fontawesome
-    
-    <li>que la informacion se vea solo en base a una busqueda, si se requiere, mejor generar un excel con todos, para obtener una sola lista con toda la informacion // aqui el problema es lo lento que se va a poner el sistema si mostramos una lista Gigante de empleados</li>
+      trabajar servicio que trae vacaciones (ciertos campos de la misma tabla de empleados)
+      trabajar con el servicio que inserta nuevas vacaciones
+      trabajar con el servicio que edita vacaciones
+      que borra vacaciones
+
+      trabajar servicio que regresa empleados 
+        (en la llamada el microservicio debe actualizar la antiguedad)
+      trabajar con el servicio que inserta empleados
+      trabajar con el servicio que modifica empleados
+      que elimina empleados
+
+      servicio que saca vista uno, vista dos, vista tres (hacen calculos al tomar los datos)
+      servicio que saca la vista tres sueldos, ocupa el servicio que trae el CONFIG, 
+        es el mas pesado en la parte de calculos
+
+    agregar boton para borrar empleado
+    agregar boton para meter nuevos empleados
   </ul>
+  
+  <br>
 
-    <br>
-
-  User Stories / Requerimientos
+  <div>User Stories / Requerimientos</div>
   <ul>
-    <li>angular [LOGIN] - usar ng-router, navegacion entre pantallas</li>
-    <li>angular [LOGIN] - llamada a SERVICIO para autenticacion del usuario</li>
-    <li>angular [LOGIN] - Un usuario autenticado es dirigido a la siguente vista usando ng-router</li>
-    <li>angular [LOGIN] - detectar si el usuario esta logueado al acceder a la URL directamente, si no, mostrar componente de logueo</li>
-    <li>java [SERVICIOS] - llamadas al SERVICIO de busqueda cada vez q se pone una letra en la caja de busqueda // SERVICIO JAVA</li>
-    <li>angular - componente - mostrar lista (mock) de nombres como resultado de busqueda (basado en observable)</li>
-    <li>java [SERVICIOS] - componente - obtener lista de nombres al llamar al SERVICIO de busqueda</li>
-    <li>angular - el componente anterior te muestra un boton para ir al detalle del empleado</li>
-    <li>angular - el boton "ver" te deja ver el detalle de un empleado</li>
-    <li>angular - llamar al SERVICIO para el detalle de un empleado</li>
-    <li>java [SERVICIOS] - SERVICIO para el detalle de un empleado</li>
-    <li>angular - ligar el formulario ,con las nuevas fechas, a un modelo para que cada cambio se refleje ahi</li>
-    <li>angular - boton "agregar dias" actualiza el store de los nuevos dias que el empleado tomara y manda la info al SERVICIO java</li>
+    <li> Angular </li>
+    <li> [LOGIN] - usar ng-router, navegacion entre pantallas</li>
+    <li> [LOGIN] - llamada a SERVICIO para autenticacion del usuario</li>
+    <li> [LOGIN] - Un usuario autenticado es dirigido a la siguente vista // ng-router</li>
+    <li> [LOGIN] - detectar si el usuario esta logueado al acceder a la URL directamente, si no, mostrar componente de logueo</li>
+    <li> [BUSQUEDA] - mostrar lista de nombres como resultado de busqueda (basado en observable)</li>
+    <li> [vista uno] - mostrar sueldo, dia ingreso</li>
+    <LI> [vista uno] - agregar empleados</li>
+    <li> [vista dos] - mostrar dias generados, vigencia, </li>
+    <li> [vista modificar] - mostrar fechas dias disfrutados,</li>
+    <li> [vista modificar ]- agregar nuevos dias de vacaciones disfrutadas</li>
+    <li> [vista tres ]- mostrar todos los tipos de sueldos</li>
+    <li> [vista config] - mostrar constantes</li>
+    <li> [vista config] - agregar nuevas constantes</li>
   </ul>
 
   <br>
 
-  Servicios
+  <div>Java - Servicios</div>
   <ul>
-    <li>servicio para autenticar usuario</li>
-    <li>servicio para buscar un empleado</li>
+    <li> servicio para autenticar usuario</li>
+    <li> BUSQUEDA - obtener lista de nombres en base a parametro/query (en base a key-event en UI)</li>
+    <li> vista uno - lista de empleados con sueldo, fecha ingreso</li>
+    <li> vista uno - agregar empleados</li>
+    <li> vista dos - lista de empleados con detalles de vacaciones</li>
+    <li> vista modificar - listar detalles de vacaciones</li>
+    <li> vista modificar - agregar dias disfrutados</li>
+    <li> vista tres - lista con sueldos</li>
+    <li> vista config - obtener constantes</li>
+    <li> vista config - agregar relacion de dias generados</li>
     <li>servicio para obtener el detalle de un empleado</li>
   </ul>
 
-  <div>----------------------------------------------------------------------------------------------------</div> <br>
+  <div>---------------------------------------------------------------------------------------</div>
+  <br>
 
   <pre>
+  Login
   public boolean isValidUser(string userId, string password); 
-  public List<Employee> searchEmployee(string query); 
-  public Employee getEmployee(string employeeId); 
-  public List<DiasTomados> getDaysBurned(string employeeId);  
+
+  Vista Uno y Dos
+  public List<Employee> getEmployees(string query); 
+  public Employee getEmployeeById(string employeeId); 
+  public addEmployee(nombre, ingreso, sueldo, generados, antiguedad, vigencia);
+
+  Vista Modificar
+  List<Disfrutados> getDatesDetailsById()
+
+  Vista Tres
+  List<Sueldos> getSueldoEmployees()
+
+  Vista Config
+  List<Config> getConfig(){}
 
   donde:
-    Employee{
-      id: number, 
-      nombre: string, 
-      vacaciones: Dias
+    Employee {
+      int empleadoId;
+      String nombre;
+      Date ingreso;
+      double sueldo;
+      int generados;
+      double antiguedad;
+      vigencia_inicio: date,
+      vigencia_final: date,
     }
-    
-    Dias {
-      fechaInicio: date
-      fechaFinal: date
-      status: "vigentes" | "vencidas",
+
+    Disfrutados {
+      empleadoId: number,
+      inicio: date,
+      final: date,
       total: number,
-      tomados: number
+      concepto: "Paternidad" | "Vacaciones" | "Maternidad" | "Otro"
     }
     
-    DiasTomados {
-      employeeId: number,
-      concepto: "Paternidad" | "Vacaciones" | "Maternidad" | "Otro"
-      fechaInicio: date
-      fechaFinal: date
-      status: "Aprobado" | "PorAprobarse"
+    Sueldos {
+      empleadoId: number,
+      diario: number,
+      fiscal: number,
+      total_vacaciones: number,
+      total_prima: number,
+      sueldo_fiscal: number,
+      complemento: number,
     }
+
   </pre>
+
+  <pre>
+    Uno se enfoca en el "como", 
+    pero termina perdiendo el "por que" ... 
+  o "para que" ...
+   Olafur Eliasson
+  </pre>
+
 
 </body>
 </html>
+  
