@@ -4,8 +4,9 @@ El sitio tiene como objetivo explorar javascript/java atravez de ejemplos sencil
 
 
 ### Javascript ES5
-1. tipos de primitivas en js-es5 <br>
-[go -> sample.html](http://israel-altamira.github.io/sample.html) in this repo or<br>
+1. [go -> sample.html](http://israel-altamira.github.io/sample.html) in this repo or<br>
+2. [g0->](http://israel-altamira.github.io/tuto-es5/cap1 1_funciones declaradas vs expresiones.html) declaraciones de funciones VS funciones como expresiones
+3.
 
 
 ### Javascript ES6
