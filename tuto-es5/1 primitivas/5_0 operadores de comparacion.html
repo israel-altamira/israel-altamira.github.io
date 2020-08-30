@@ -1,0 +1,148 @@
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div ng-app="formExample">
+            <h1>Cohercion al momento de comparar valores</h1>
+            <h2>operadores de comparacion double and triple equals</h2>
+            
+            <h4>https://codeburst.io/javascript-double-equals-vs-triple-equals-61d4ce5a121a</h4>
+            
+            <p>Caemos en este tema por que comenzamos por saber identificar los tipos primitivos de javascript</p>
+            <p>entonces, el tipo "null" es mejor identificarlo con el triple equals que con el typeof</p>
+            
+            <code>
+            typeof null => "object" <br>
+            value === null ? //true cuando en verdad sea un tipo nulo <br>
+            </code>
+            
+            <h1>Triple Equals</h1>
+            <p>When using triple equals === in JavaScript, we are testing for strict equality. </p>
+            <p>This means both the type and the value we are comparing have to be the same.</p>
+            
+            <code>
+            <p>5 === 5 // true</p>
+            
+            <p>'hello world' === 'hello world'</p>
+            <p>// true (Both Strings, equal values)</p>
+            
+            <p>true === true</p>
+            <p>// true (Both Booleans, equal values)</p>
+            
+            <p>77 === '77'</p>
+            <p>// false (Number v. String)</p>
+            
+            <p>'cat' === 'dog'</p>
+            <p>// false (Both are Strings, but have different values)</p>
+            
+            <p>false === 0</p>
+            <p>// false (Different type and different value)</p>
+            </code>
+            
+            <p>Again, the key takeaway for triple (strict) equality is that both the type and the value we are comparing have to be the same.</p>
+            
+            
+            
+            <h1>Double equals</h1>
+            When using double equals in JavaScript we are testing for <strong>loose equality</strong>.
+            Double equals also performs <strong>type coercion.</strong>
+            
+            <h2>Type coercion </h2>
+            <p>means that two values are compared only after attempting to convert them into a common type.</p>
+            
+            <code>
+                <p>77 === '77'</p>
+                <p>// false (Number v. String)</p>
+
+                <p>but with loose equiality....</p>
+                <p>77 == '77'</p>
+                <p>// true</p>
+
+                <p>false === 0</p>
+                <p>// false (Different type and different value)</p>
+
+                <p>false == 0 // this has to do with falsy values in JavaScript. </p>
+                <p>// true</p>
+            </code>
+            
+            <h1>Falsy Values in loose equality</h1>
+            <p>so why does false == 0 in JavaScript? It’s complex, but it’s because in JavaScript 0 is a falsy value.</p>
+            <p>Type coercion will actually convert our zero into a false boolean, then false is equal to false</p>
+            <p>There are only six falsy values in JavaScript you should be aware of:</p>
+
+            <ol>
+                <li>false  —  boolean false</li>
+                <li>0  — number zero</li>
+                <li>“”  —  empty string</li>
+                <li>null</li>
+                <li>undefined</li>
+                <li>NaN  —  Not A Number</li>
+            </ol>
+            
+            
+            
+            <h1>Falsy Value Comparison</h1>
+            
+            <h2>1. false, 0, and ""</h2>
+            
+            <p>When comparing any of our first three falsy values with loose equality, 
+                they will always be equal! That’s because these values will all coerce into a false boolean.</p>
+            
+            <code>
+                <p>false == 0
+                // true</p>
+
+                <p>0 == ""
+                // true</p>
+            
+                <p>"" == false
+                // true</p>
+
+                <h2>2. null and undefined</h2>
+                <p>When comparing null and undefined, they are only equal to themselves and each other:</p>
+
+                <p>null == null
+                // true</p>
+
+                <p>undefined == undefined
+                // true</p>
+
+                <p>null == undefined
+                // true</p>
+
+                <p>If you try to compare null to any other value, it will return false</p>
+
+                <h2>3. NaN</h2>
+                <p>Lastly, NaN is not equivalent to anything. Even cooler, it’s not even itself!</p>
+
+                <p>NaN == null
+                // false</p>
+
+                <p>NaN == undefined
+                // false</p>
+
+                <p>NaN == NaN
+                // false</p>
+            </code>
+            
+            
+            
+            <h1>Key Takeaways</h1>
+            
+            <p>As you’ve seen, type coercion can get a bit crazy in JS. Unless you’re very familiar with JavaScript, </p>
+            <p>loose equality can lead to more headaches than it’s worth. </p>
+            <p>Memorizing the six falsy values and the rules associated with them can go a long way towards understanding loose equality.</p>
+            
+            <p>Triple Equals is superior to double equals. </p>
+            <p>Whenever possible, you should use triple equals to test equality. </p>
+            <p>By testing the type and value you can be sure that you are always executing a true equality test.</p>
+            
+        </div>
+        
+        <script>
+        </script>
+        
+    </body>
+</html>

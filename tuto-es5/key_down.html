@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<body>
+
+<p>A function is triggered when the user is pressing a key in the input field.</p>
+<p>El problema con este evento ONKEYDOWN es que si tomas el texto del input en ese momento, te da todos los caracteres escritos
+    anteriormente, no el actual</p>
+<input id="sampleInput" type="text" onkeydown="myFunction()">
+
+<script>
+function myFunction(event) {
+    alert("You pressed a key inside the input field: " + $('#sampleInput').val());
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <div ng-app="formExample">
+            
+            Escrito original en esta pagina
+            <h4>https://developer.mozilla.org/es/docs/Web/JavaScript/Equality_comparisons_and_sameness</h4>
+            
+            
+            <h1>Hay cuatro algoritmos de igualdad en ES2015:</h1>
+            
+            <li>Comparación de Igualdad Abstracta (==)</li>
+            <li>Comparación de Igualdad Estricta (===): usado por by Array.prototype.indexOf, Array.prototype.lastIndexOf, y  case-matching</li>
+            <li>SameValueZero: Usado por  los constructores de %TypedArray% y ArrayBuffer , así como por las operaciones de Map y Set, y los nuevos String.prototype.includes de ES2016</li>
+            <li>SameValue: usado en el resto de los casos            </li>
+            
+            
+            <h1>tres operaciones distintas</h1>
+            
+            <li>Igualdad estricta  (o "triple igual" o "identidad") usando ===, </li>
+            <li>igualdad débil o relajada  ("doble igual") usando ==,</li>
+            <li>y Object.is (nuevo en ECMAScript 2015).</li>
+            
+            
+            
+            
+            <h1>Explicando de manera concisa</h1>
+
+            <li>un doble igual lleva a cabo una conversión de tipo (cast) cuando se comparan dos cosas;</li>
+            <li>el triple igual simplemente devuelve falso si los tipos de los elementos a comparar son diferentes</li>
+            <li>Object.is funciona de la misma manera que el triple igual pero hace una gestión especial de <strong>NaN, -0 y +0 </strong> de tal manera que 
+            <li>1) Object.is(+0,-0) nos devolvera (false). (RECUERDA QUE el operador de comparacion estricta devuelve TRUE -> -0===+0)</li>
+            <li>2) Object.is(NaN, NaN) nos devolverá (true). (Si comparamos NaN con NaN de manera ordinaria , por ejemplo usando el doble igual o el triple igual, nos devolverá false, ya que la especificación IEEE 754 así lo dice). </li>
+            
+            
+            <p>Ninguna de estas posibilidades compara si los parámetros son similares en relación a su estructura.</p>
+            <p>Para comparar dos objectos no primitivos , X e Y, que tengan la misma estructura pero que sean objetos diferentes entre ellos, todos los casos anteriormente descritos devolverán false. </p>
+            
+            
+        
+            <h1>Igualdad Estricta usando  ===</h1>
+ 
+            <p>El operador igualdad estricta compara la igualdad de dos valores. </p>
+            <p>Ninguno de estos valores se convierte de manera implícita antes de ser comparado.</p>
+            <p>Si los valores tienen tipos diferentes son considerados diferentes. </p>
+            <li>si los valores tienen el MISMO TIPO y NO SON NUMEROS, son IGUALES si TIENEN el MISMO valor.</li>
+            <li>si ambos valores SON NUMEROS, son IGUALES si NO son NaN y tienen el MISMO valor</li>
+            <li>o si uno es +0 y otro -0.</li>
+            
+            
+            <code>
+                var num = 0; <br>
+                var obj = new String("0"); <br>
+                var str = "0"; <br>
+                var b = false; <br>
+<br>
+                console.log(num === num); // true <br>
+                console.log(obj === obj); // true <br>
+                console.log(str === str); // true <br>
+<br>
+                console.log(num === obj); // false <br>
+                console.log(num === str); // false <br>
+                console.log(obj === str); // false <br>
+                console.log(null === undefined); // false <br>
+                console.log(obj === null); // false <br>
+                console.log(obj === undefined); // false <br>
+<br>
+                console.log(+0 === -0);        // true <br>
+                console.log(NaN === NaN);        // false <br>
+<br>
+                var obj = new String("0"); <br>
+                console.log(obj === obj2);      // false <br>
+            </code>
+            
+            
+            
+            
+            <h1>Igualdad débil usando  ==</h1>
+            
+            <p>El operador igualdad débil compara la igualdad de dos valores después de convertir ambos valores a un tipo de datos común. </p>
+            <p>Tras la conversión  , la comparación que se lleva a cabo funciona exactamente como ===. </p>
+            <p>La igual débil es una igualdad simétrica: A == B tiene una semática idéntica a B == A </p>
+            <p>para cualquier valor que tengan A y B ( excepto por el orden de las conversiones de tipo aplicadas)</p>
+
+<br>
+
+            <table style="border: solid 1px">
+                <caption>TABLA de verdad operador igualdad abstracta (igualdad debil)</caption>
+                <tr>
+                    <th>TIPO</th>
+                    <th>null</th>
+                    <th>undefined</th>
+                    <th>number</th>
+                    <th>string</th>
+                    <th>boolean</th>
+                    <th>object</th></tr>
+                <tr>
+                    <td>null</td>   <td>true</td>   <td>true</td>       <td>false</td>  <td>false</td>  <td>false</td>      <td>false</td>
+                </tr>
+                <tr>
+                    <td>undefined</td><td>true</td><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td>
+                </tr>
+                <tr>
+                    <td>number</td>
+                    <td>false</td>
+                    <td>false</td>
+                    <td>a === b</td>
+                    <td>a === toNumber(b)</td>
+                    <td>a === toNumber(b)</td>
+                    <td>A === toPrimitive(B)</td>
+                </tr>
+                <tr>
+                    <td>string</td>
+                    <td>false</td>
+                    <td>false</td>
+                    <td>toNumber(A) === B</td>
+                    <td>A === B</td>
+                    <td>toNumber(A) === toNumber(B)</td>
+                    <td>toNumber(A) === toPrimitive(B)</td>
+                </tr>
+                <tr>
+                    <td>boolean</td>
+                    <td>false</td>
+                    <td>false</td>
+                    <td>toNumber(A) === B</td>
+                    <td>toNumber(A) === toNumber(B)</td>
+                    <td>A === B</td>
+                    <td>toNumber(A) === toPrimitive(B)</td>
+                </tr>
+                <tr>
+                    <td>object</td>
+                    <td>false</td>
+                    <td>false</td>
+                    <td>toPrimitive(A) === B</td>
+                    <td>toPrimitive(A) === toNumber(B)</td>
+                    <td>toPrimitive(A)=== toNumber(B)</td>
+                    <td>toPrimitive(A) === toPrimitive(B)</td>
+                <tr>
+            </table>
+
+            <p>En la tabla previa, ToNumber(A) intenta convertir su argumento a número antes de realizar la compración.</p>
+            <p>ToPrimitive(A) intenta convertir su objeto argumento a un valor de tipo primitivo realizando varias secuencias de invocaciones
+            <p>(A.toString y A.valueOf en A.)</p>
+
+            <p>Tradicionalmente, y de acuerdo con la especificación ECMAScript, </p>
+            <p>todos los objetos son débilmente desiguales comparándolos con undefined y null.</p>
+            <p>Pero algunos nevegadores permiten que una cantidad muy limitada  de clases de objetos y solo en algunos contextos,</p>
+            <p>(especifícamente , el objeto documento.all para todas las páginas),</p>
+            <p>puedan actuar como si emularan el valor undefined. </p>
+            <p>En ese contexto se evalúa como verdadero las igualdades débiles null == A y undefined == A, </p>
+            <p>sí y sólo sí, A es un objecto que emula undefined. </p>
+            <p>En cualquier otro caso la igual débil no será verdadera con undefined o null.</p>
+            
+            <code>
+                var num = 0; <br>
+                var obj = new String("0"); <br>
+                var str = "0"; <br>
+                var b = false; <br>
+ <br>
+                console.log(num == num); // true <br>
+                console.log(obj == obj); // true <br>
+                console.log(str == str); // true <br>
+ <br>
+                console.log(num == obj); // true <br>
+                console.log(num == str); // true <br>
+                console.log(obj == str); // true <br>
+                console.log(null == undefined); // true <br>
+ <br>
+                // both false, except in rare cases <br>
+                console.log(obj == null); <br>
+                console.log(obj == undefined); <br>
+            </code>
+            
+        </div>
+
+        <script>
+            console.log("ejercicio 1");
+            
+            var num = 0;
+            var obj = new String("0");
+            var str = "0";
+            var b = false;
+
+            console.log("num === num ? " + (num === num)); // true
+            console.log("obj === obj ? " + (obj === obj)); // true
+            console.log("str === str ? " + (str === str)); // true
+
+            console.log("num === obj ? " + (num === obj));           // false
+            console.log("num === str ? " + (num === str));           // false
+            console.log("obj === str ? " + (obj === str));           // false
+            console.log("null === undefined ? " + (null === undefined));    // false
+            console.log("obj === null ? " + (obj === null));          // false
+            console.log("obj === undefined ? " + (obj === undefined));     // false
+            
+            console.log("ejercicio 2 ");
+            console.log("+0 === -0 ? " + (+0 === -0));        // true
+            console.log("NaN === NaN ? " + (NaN === NaN));    // false
+            
+            console.log("ejercicio 3");
+            var obj2 = new String("0");
+            console.log("obj === obj2 ? " + (obj===obj2));
+            
+            //
+            console.log("ejercicio 4");
+            console.log("num == num ? " + (num == num)); // true
+            console.log("obj == obj ? " + (obj == obj)); // true
+            console.log("obj == obj ? " + (obj == obj)); // true
+
+            console.log("num == obj ? " + (num == obj)); // true
+            console.log("num == str ? " + (num == str)); // true
+            console.log("obj == str ? " + (obj == str)); // true
+            console.log("null == undefined ? " + (null == undefined)); // true
+
+            // both false, except in rare cases
+            console.log("obj == null ? " + (obj == null));
+            console.log("obj == undefined ? " + (obj == undefined));
+            
+            console.log("ejercicio 5");
+            console.log("+0 == -0 ? " + (+0 == -0));        // true
+            console.log("NaN == NaN ? " + (NaN == NaN));    // false
+            console.log("obj == obj2 ? " + (obj == obj2));      // false
+        </script>
+    </body>
+</html>

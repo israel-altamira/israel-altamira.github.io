@@ -1,0 +1,50 @@
+
+<html>
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    </head>
+
+    <body>
+        <div ng-app="formExample">
+        <div ng-controller="ExampleController">
+            <!-- -->
+            <!-- -->
+        </div>
+        </div>
+
+        <script>
+
+            // JS CODE
+
+            function uno() { 
+                var _uno = 1000; 
+                function getUno() {
+                  return _uno;  
+                };
+                function dos() {
+                    var _dos = 2;
+                    function tres() {
+                        var _tres = 3;
+                        function cuatro() {
+                            var _cuatro = getUno();
+                            console.log("_cuatro :" + _cuatro);
+                            _cuatro = _dos; 
+                            console.log("_cuatro :"+ _cuatro);
+                            _cuatro = _tres; 
+                            console.log("_cuatro :"+ _cuatro);
+                        }; 
+                        cuatro();
+                    };
+                    tres();
+                };
+                dos(); // se ejecutan las funciones internas
+                return new dos(); // se ejecutan las funciones internas
+            };
+            uno(); // se ejecutan las funciones internas
+            
+            var objDos = uno(); // se ejecutan las funciones internas
+            console.log("objDos._uno existe?" + objDos._uno); // undefined;
+        </script>
+    </body>
+</html>

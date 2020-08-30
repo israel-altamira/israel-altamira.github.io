@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Vamos a calar el scope de un codigo</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    //document.getElementById("demo").innerHTML = a;
+    var addresspanel = AddressPanel;
+    addresspanel.init();
+}
+    
+window.AddressPanel = function() {
+        var _public = {}
+        _public.show = function (){
+            console.log('showing!');
+            document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "<p>Showing!!</p>";
+        };
+        _public.init = function () {
+            console.log('init!');
+            document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "<p>La funcion ya se inicializo</p>";
+            _public.show();
+        };
+        return _public;
+}();
+    
+</script>
+
+
+    <code>
+function myFunction() { <br/>
+    var addresspanel = AddressPanel; <br/>
+    addresspanel.init(); <br/>
+}
+
+window.AddressPanel = function() { <br/>
+var _public = {} <br/>
+_public.show = function (){ <br/>
+    console.log('showing!'); <br/>
+    document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "<p>Showing!!</p>"; <br/>
+}; <br/>
+_public.init = function () { <br/>
+    console.log('init!'); <br/>
+    document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "<p>La funcion ya se inicializo</p>"; <br/>
+    _public.show(); <br/>
+};<br/>
+return _public; <br/>
+}();
+    </code>
+    
+    
+</body>
+</html>

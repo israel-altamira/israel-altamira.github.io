@@ -1,0 +1,38 @@
+
+<html>
+
+<head>
+	
+</head>
+
+
+<div ng-app="formExample">
+<div ng-controller="ExampleController">
+  
+    
+    <h1>Cuando asignas el valor de una primitva a una variable: este es copiado</h1>
+    <code>
+        var color1 = "red"<br/>
+        var color2 = color1; <br/>
+        color1 = "blue"<br/>
+        console.log(color1); // blue<br>
+        // tal vez esperas que color2 haya cambiado a blue, pero no! <br>
+        console.log(color2); // red<br>
+    </code>
+    
+</div>
+</div>
+
+<script>
+   
+    var color1 = "red";
+    var color2 = color1;
+    color1 = "blue";
+
+    console.log(color1); 
+    // tal vez esperas que color2 haya cambiado a blue, pero no! <br>
+    console.log(color2); 
+    
+</script>
+
+</html>

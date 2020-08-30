@@ -1,0 +1,117 @@
+
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <div ng-app="formExample">
+           
+            <h1>primitive wrappers</h1>
+            
+            <p>tal vez lo mas confuso en javascript</p>
+            <li>los primitive wrappers son String, Number, Boolean</li>
+            <li>son creados automaticamente detras de escena cuando las primitvas strings, numbers y booleans <strong>SON LEIDOS</strong></li>
+            
+            <code>
+                var name = 'Nicholas'; <br>
+                var firstChar = name.charAt(0); <br>
+                console.log("primer caracter de la primitiva ->" + firstChar); <br>
+            </code>
+            <script>
+                var name = 'Nicholas';
+                var firstChar = name.charAt(0);
+                console.log("primer caracter de la primitiva ->" + firstChar);
+            </script>
+            
+            <p>Esto es lo que pasa detras de escena</p>
+            
+            <code>
+                var name = 'Nicholas'; <br> 
+                var temp = new String(name); <br>
+                var firstChar = temp.charAt(0); <br>
+                temp = null; <br>
+                console.log("primer caracter de la primitiva ->" + firstChar); <br>
+            </code>
+            <script>
+                var name = 'Nicholas';
+                var temp = new String(name);
+                var firstChar = temp.charAt(0);
+                temp = null;
+                console.log("primer caracter de la primitiva ->" + firstChar);
+            </script>
+            
+            <p>El String Object solo exite por 1 linea, luego es destruido, a este proceso se le llama <strong>AUTOBOXING</strong></p>
+            
+            <p>Se remarca el echo de que solo se hacen automaticamente al leerlos Y se destruyen inmediatamente despues de haber sido leidos</p>
+            <p>por lo que no puedes agregar nuevas propiedades al objeto:</p>
+            
+            <code>
+                var name = 'Nicholas';<br>
+                name.last = 'Zakas';<br>
+                console.log("Existe la nueva propiedad agregada al obj? ->" + name.last);<br>
+            </code>
+            <script>
+                var name = 'Nicholas';
+                name.last = 'Zakas';
+                console.log("Existe la nueva propiedad agregada al obj? ->" + name.last);
+            </script>
+            
+            <p>Aunque los valores de referencia son creados automaticamente para los primitive values</p>
+            <p>cuando se usa <strong>instanceof</strong> y se checan este tipo de valores (primitive wrappers types) el resultado es FALSE</p>
+            <p>por que los objetos temporales son creado solo al momento de leerlos (por lo visto instanceof no hace una lectura en si)</p>
+            <code>
+                var name = "Nicholas"; <br>
+                var count = 10;<br>
+                var found = false;<br>
+                console.log("name instanceof String? " + (name instanceof String)); // false <br>
+                console.log("count instanceof Number" + (count instanceof Number)); // false<br>
+                console.log("found instanceof Boolean" + (found instanceof Boolean)); // false<br>
+            </code>
+            <script>
+                var name = "Nicholas";
+                var count = 10;
+                var found = false;
+                console.log("name instanceof String? " + (name instanceof String)); // false 
+                console.log("count instanceof Number" + (count instanceof Number)); // false
+                console.log("found instanceof Boolean" + (found instanceof Boolean)); // false
+            </script>
+            
+            <p>Puedes hacer tus primitive wrapper types manualmente pero hay un side effect, no puedes identificar el tipo de la primitiva con typeof</p>
+            
+            <code>
+                var name = new String("Nicholas"); <br>
+                var count = new Number(10); <br>
+                var found = new Boolean(false); <br>
+                console.log("typeof name? " + (typeof name)); // "object" <br>
+                console.log("typeof count" + (typeof count)); // "object" <br>
+                console.log("typeof found" + (typeof found)); // "object" <br>
+            </code>
+            <script>
+                var name = new String("Nicholas");
+                var count = new Number(10);
+                var found = new Boolean(false);
+                console.log("typeof name? " + (typeof name)); // "object"
+                console.log("typeof count" + (typeof count)); // "object"
+                console.log("typeof found" + (typeof found)); // "object"
+            </script>
+            
+            <p>No se puede usar los primitive wrapper types como se usan las primitivas</p>
+            <p>En el siguiente codigo el objeto Boolean es Falso pero de cualquier modo el IF se ejecuta </p>
+            <p>debido a que el objeto siempre es considerado TRUE dentro de un statement condicional </p>
+            
+            <code>
+                var found = new Boolean(false); <br>
+                if(found){<br>
+                    console.log("Found"); // this executes!!<br>
+                }<br>
+            </code>
+            <script>
+                var found = new Boolean(false);
+                if(found){
+                    console.log("Found"); // this executes!!
+                }
+            </script>
+            
+        </div>
+    </body>
+</html>

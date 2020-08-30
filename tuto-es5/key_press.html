@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<body>
+
+<p>A function is triggered when the user is pressing a key in the input field.</p>
+<p>El problema con este evento ONKEYPRESS es que si tomas el texto del input en ese momento, te da todos los caracteres escritos
+    anteriormente, no el actual</p>
+    
+<input id="sampleInput" type="text" onkeypress="myFunction()">
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onkeyup
+<script>
+function myFunction() {
+    alert("You pressed a key inside the input field: " + $('#sampleInput').val());
+}
+</script>
+
+</body>
+</html>

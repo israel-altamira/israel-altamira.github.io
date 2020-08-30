@@ -1,0 +1,81 @@
+
+<html>
+
+    <head>
+    </head>
+
+    <body ng-app="formExample">
+
+        <h3>Con este codigo puedes hacer un objeto con las propiedades que tu quieras</h3>
+        <h3>a partir de un arreglo con nombres para esas propiedades</h3>
+        <h4>https://stackoverflow.com/questions/17643965/automatically-create-object-if-undefined</h4>
+
+        <p>Esta es la funcion</p>
+        <p>nota como del arreglo de nombres para las nuevas propiedades del objeto</p>
+        <p>se toma la primera y se agrega al objecto <strong>(obj[arr[0]] = ...)</strong></p>
+        <p>no sin antes checar que dicha propiedad no exista anteriormente <strong>(obj[arr[0]] || {})</strong></p>
+        <code>
+            function addProps(obj, arr, val) { <br>
+                if (typeof arr == 'string'){ <br>
+                    arr = arr.split("."); <br>
+                } <br>
+<br>
+                obj[arr[0]] = obj[arr[0]] || {}; <br>
+<br>
+                var tmpObj = obj[arr[0]]; <br>
+<br>
+                if (arr.length > 1) { <br>
+                    arr.shift(); <br>
+                    addProps(tmpObj, arr, val); <br>
+                } else { <br>
+                    obj[arr[0]] = val; <br>
+                } <br>
+<br>
+                return obj; <br>
+            } <br>
+        </code>
+
+        <p>Call it with a dot notated string</p>
+        <code>myObj = {};</code>
+        <code>addProps(myObj, 'sub1.sub2.propA', 1);</code>
+        <p>or with an array</p>
+        <code>addProps(myObj, ['sub1', 'sub2', 'propA'], 1);</code>
+        <p>and your object will look like this</p>
+        <code>
+            myObj = {<br>
+              "sub1": {<br>
+                "sub2": {<br>
+                  "propA": 1<br>
+                }<br>
+              }<br>
+            };
+        </code>
+        <p>It works with non-empty objects too!</p>
+    </body>
+
+    <script>
+        function addProps(obj, arr, val) {
+            if (typeof arr == 'string'){
+                arr = arr.split(".");
+            }
+
+            obj[arr[0]] = obj[arr[0]] || {};
+
+            var tmpObj = obj[arr[0]];
+
+            if (arr.length > 1) {
+                arr.shift();
+                addProps(tmpObj, arr, val);
+            } else {
+                obj[arr[0]] = val;
+            }
+
+            return obj;
+        }
+        
+        myObj = {};
+        addProps(myObj, 'sub1.sub2.propA', 1);
+        console.log("Mi objeto final: ", myObj);
+    </script>
+
+</html>

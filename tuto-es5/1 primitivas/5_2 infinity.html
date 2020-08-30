@@ -1,0 +1,47 @@
+<html>
+    
+    <head></head>
+    
+    <body>
+        <h1>¿Cuanto es infinito negativo mas infinito positivo? => Es NaN? </h1>
+        
+        <p>Infinity es una del objeto global, es decir, esta es una variable de alcance global.</p>
+
+        <li>El valor inicial de Infinity es Number.POSITIVE_INFINITY. </li>
+        <li>El valor de Infinity (infinito positivo) es mayor que cualquier otro numero incluido el mismo. </li>
+        <li>Este valor se comporta matematicamente como el infinito matemático; </li>
+        <li>por ejemplo, cualquier numero multiplicado por Infinity da como resultado Infinity, </li>
+        <li>y cualquier numero divido por Infinity da como resultado cero.</li>
+
+        <p>Para la especificación ECMAScript 5, Infinity es de solo lectura (implementado en JavaScript 1.8.5  / Firefox 4).</p>
+        
+        <code>
+            var a = Infinity; <br>
+            var b = Number.NEGATIVE_INFINITY;<br>
+            console.log("numero a " + a);<br>
+            console.log("numero b " + b);<br>
+            console.log("a > a ? " + (a>b)); // true<br>
+            console.log("a + b => " + (a+b)); // Nan<br>
+            console.log("1 * a => " + (1*a)); // Infinity<br>
+            console.log("1 * b => " + (1*b)); // -Infinity<br>
+            console.log("1 / a => " + (1/a)); // 0<br>
+            console.log("1 / b => " + (1/b)); // 0 , nota: esperaba q fuera -0 en realidad<br>
+        </code>
+        <script>
+            var a = Infinity;
+            var b = Number.NEGATIVE_INFINITY;
+            console.log("numero a " + a);
+            console.log("numero b " + b);
+            console.log("a > a ? " + (a>b)); // true
+            console.log("a + b => " + (a+b)); // Nan
+            console.log("1 * a => " + (1*a)); // infinito positivo
+            console.log("1 * b => " + (1*b)); // infinito negativo
+            console.log("1 / a => " + (1/a)); // 0
+            console.log("1 / b => " + (1/b)); // 0 , nota: esperaba q fuera -0 en realidad
+        </script>
+        
+        <p>Toma en cuentas las propiedades:</p>
+        <p>Number.NEGATIVE_INFINITY</p>
+        <p>Number.POSITIVE_INFINITY</p>
+    </body>
+</html>

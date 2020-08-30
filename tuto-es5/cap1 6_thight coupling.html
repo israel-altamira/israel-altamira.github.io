@@ -1,0 +1,50 @@
+
+<html>
+    <body>
+        
+        <h1>Tight Coupling (objetos fuertemente acoplados) y el uso del objeto THIS</h1>
+        <p>El objeto hace referencia al nombre del objeto donde se declara una de sus funciones/metodos</p>
+        <p>a esto se le cataloga como tight coupling</p>
+        <p>OBSERVAR que pasa si copiamos la referencia de su metodo/funcion a otro objeto</p>
+        <p>RESULT: se sigue haciendo referencia al objeto donde se declaro la funcion</p>
+        <script>
+            // JS CODE
+            var person = {
+                name: 'nicholas',
+                sayname: function(label){
+                    console.log(label + ':' + person.name); // tight coupling
+                }
+            };
+            person.sayname('fromPerson'); // fromPerson:nicholas
+            
+            // copiamos la referencia
+            var anotherPerson = {
+                name: 'israel',
+                sayname: person.sayname
+            };
+            anotherPerson.sayname('fromAnother'); // fromAnother:nicholas
+        </script>
+        
+        <p>Veamos el ejemplo anterior pero usando el objeto THIS</p>
+        <li>en este caso, al hacer uso de this, lo que se imprime al llamar <strong>this.name</strong> es el nombre declarado en cada objeto</li>
+        <script>
+            function sayNameForAll(label){
+                console.log(label + ':' + this.name); // tight coupling
+            };
+            var person1 = {
+                name: 'nicolas',
+                sayname: sayNameForAll
+            }
+            var person2 = {
+                name: 'greg',
+                sayname: sayNameForAll
+            }
+            var name = "michael";
+            //
+            person1.sayname(); // nicolas
+            person2.sayname(); // greg
+            sayNameForAll(); // michael
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,55 @@
+
+<html>
+    <head>
+        
+    </head>
+    <body>
+        
+        
+        <h1>constructores de tipos conocidos</h1>    
+            
+        <p>vamos a instanciar un arreglo y una funcion de dos modos posibles: por su forma literal y utilizando su constructor</p>
+        <code>    
+            // instanciar un objeto Array con literal o por constructor<br>
+            var colors = ['red', 'blue', 'green'];<br>
+            console.log("array literal form - colors[0]" + colors[0]);<br>
+            // instanciar un objeto Array por constructor<br>
+            var colorbyconstructor = new Array("red", "blue", "green");<br>
+            console.log("array literal form - colorbyconstructor[0]" + colorbyconstructor[0]);<br>
+        </code>
+        <script>    
+            // instanciar un objeto Array con literal o por constructor
+            var colors = ['red', 'blue', 'green'];
+            console.log("array literal form - colors[0]" + colors[0]);
+            // instanciar un objeto Array por constructor
+            var colorbyconstructor = new Array("red", "blue", "green");
+            console.log("array literal form - colorbyconstructor[0]" + colorbyconstructor[0]);
+        </script>
+        
+        <p>ahora:</p>
+        <code>
+            // instanciar funcion por forma literal<br>
+            function reflectFn(value){<br>
+                return value;<br>
+            }<br>
+            // instanciar funcion por constructor<br>
+            // no recomendada debio a que no se puede debuguear de esta forma el cuerpo de la funcion<br>
+            var reflect = new Function("param", "return param;"); <br>
+            console.log("usar funcion con literal form: " + this.reflectFn(1));<br>
+            console.log("usar funcion por constructor: " + this.reflect(2));<br>
+        </code>
+        <script>
+            // instanciar funcion por forma literal
+            function reflectFn(value){
+                return value;
+            }
+            // instanciar funcion por constructor
+            // no recomendada debio a que no se puede debuguear de esta forma el cuerpo de la funcion
+            var reflect = new Function("param", "return param;"); 
+            console.log("usar funcion con literal form: " + this.reflectFn(1));
+            console.log("usar funcion por constructor: " + this.reflect(2));
+        </script>
+        
+    </body>
+</html>
+ <br>

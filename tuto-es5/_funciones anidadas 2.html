@@ -1,0 +1,37 @@
+
+<html>
+    <head>
+    </head>
+    <body>
+        <div ng-app="formExample">
+        </div>
+
+        <script>
+            
+            
+            function uno() {
+                var _uno = 1; 
+                return function() {
+                    var _dos = 2;
+                    return function() {
+                        var _tres = 3;
+                        return function() {
+                          var uno = _uno;
+                          var dos = _dos; 
+                          var tres = _tres; 
+                          console.log("ejercicio 1-2-3: " + uno +","+ dos +","+ tres);
+                        }; 
+                    };
+                };
+            };
+            //uno()()()();
+            var fn2 = uno();
+            var fn3 = fn2();
+            var fn4 = fn3();
+            fn4();
+            
+            
+        </script>
+    </body>
+</html>
+ <br>

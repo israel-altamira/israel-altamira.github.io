@@ -1,0 +1,67 @@
+
+<html>
+    <head>
+        
+    </head>
+    <body>
+        
+        <h1>identificando referencias</h1>
+
+        <li>se usa el operador <strong>typeof</strong> para identificar funciones, </li>
+        <li>pero para los demas objectos resulta un poco confuso por que siempre regresa "object",</li>
+        <li>por este motivo usamos <strong>instanceof</strong></li>
+        
+        <code>
+            function reflect(value){ <br>
+                return value;<br>
+            }<br>
+            console.log('que regresa el typeof de una funcion?" typeof reflect -> ' + (typeof reflect)); // function<br>
+            var items = [];<br>
+            var object = {};<br>
+            console.log("items instanceof Array ->" + (items instanceof Array)); // true <br>
+            console.log("object instanceof Object ->" + (object instanceof Object)); // true<br>
+            console.log("reflect instanceof Function ->" + (reflect instanceof Function)); // true<br>
+        </code>
+        <script>
+            function reflect(value){
+                return value;
+            }
+            console.log('que regresa el typeof de una funcion?" typeof reflect -> ' + (typeof reflect));
+            var items = [];
+            var object = {};
+            console.log("items instanceof Array ->" + (items instanceof Array)); // true 
+            console.log("object instanceof Object ->" + (object instanceof Object)); // true
+            console.log("reflect instanceof Function ->" + (reflect instanceof Function)); // true
+        </script>
+        
+        
+        <li>el operador <strong>instanceof</strong> tambien identifica inherited types</li>    
+        
+        <code>
+            function reflect(value){ <br>
+                return value;<br>
+            }<br>
+            var items = [];<br>
+            var object = {};<br>
+            console.log("items instanceof Array ->" + (items instanceof Array)); // true <br>
+            console.log("items instanceof Object ->" + (items instanceof Object)); // true <br>
+            console.log("object instanceof Object ->" + (object instanceof Object)); // true<br>
+            console.log("object instanceof Array ->" + (object instanceof Array)); // false<br>
+            console.log("reflect instanceof Function ->" + (reflect instanceof Function)); // true<br>
+            console.log("reflect instanceof Object ->" + (reflect instanceof Object)); // true<br>
+        </code>
+        <script>
+            function reflect(value){
+                return value;
+            }
+            var items = [];
+            var object = {};
+            console.log("items instanceof Array ->" + (items instanceof Array)); // true 
+            console.log("items instanceof Object ->" + (items instanceof Object)); // true 
+            console.log("object instanceof Object ->" + (object instanceof Object)); // true
+            console.log("object instanceof Array ->" + (object instanceof Array)); // false
+            console.log("reflect instanceof Function ->" + (reflect instanceof Function)); // true
+            console.log("reflect instanceof Object ->" + (reflect instanceof Object)); // true
+        </script>
+    </body>
+</html>
