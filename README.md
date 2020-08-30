@@ -4,9 +4,9 @@ El sitio tiene como objetivo explorar javascript/java atravez de ejemplos sencil
 
 
 ### Javascript ES5
-1. [go->](./sample.html) sample.html<br>
-2. [go->](./tuto-es5/cap1 1_funciones declaradas vs expresiones.html) declaraciones de funciones VS funciones como expresiones <br>
-3. <br>
+1. [go->](./sample.html) sample.html
+2. [go->](./tuto-es5/cap1 1_funciones declaradas vs expresiones.html) declaraciones de funciones VS funciones como expresiones
+3. ?
 
 
 ### Javascript ES6
