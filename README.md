@@ -21,5 +21,4 @@ Gracias! Bon appetit!
 
 --------------------------------------------------------------------------------
 
-markup raw text - https://raw.githubusercontent.com/israel-altamira/israel-altamira.github.io/master/markdown-sample.md <br>
-[markup styled page](markdown-sample.md) - markdown-sample.md<br>
+[markup style-guide page](markdown-sample.md) - markdown-sample.md<br>
