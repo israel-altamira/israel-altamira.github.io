@@ -1,16 +1,107 @@
 ﻿<html>
     <body>
-        <h1>funciones anonimas</h1>
+        <h1>Functions as Values</h1>
         
-        <p>ejemplo de funcion anoni</p>
-        <script>
+        <ul><li>
+Because JavaScript has first-class functions, you can use them just as
+you do any other objects. </li>
+		<li>You can assign them to variables, </li>
+		<li>add them
+to objects, </li>
+		<li>pass them to other functions as arguments,</li>
+		<li> and return them
+from functions. </li>
+		<li>Basically, you can use a function anywhere you would
+use any other reference value. This makes JavaScript functions incredibly
+powerful. </li>
+		
+		</ul>
+	<p></p>
+	
+	<pre>
+function Marca(nombre, modelo) {
+	console.log('Carro Marca: ' + nombre + ' - Modelo: ' + modelo);
+}
+
+ //  Asignar las funciones como si fueran variables
+let ferrari = Marca;
+ferrari('Ferrari', 'Lamborguini');
+
+//  Asignar las funciones como si fueran variables
+let bmw = Marca;
+bmw('BMW','Serie 8');
+
+
+</pre>
+	
+        <pre>
+// Agregarlas a Objetos
+let escuderias = {
+  ferrari: ferrari, 
+  bmw: bmw
+ };
+
+escuderias.ferrari('Ferrari','Maserati');
+escuderias['bmw']('BMV','BMV i');
+
+let i = 0;
+for(let escudo in escuderias) {
+  escuderias[escudo]('Marca'+i,'Modelo'+i);
+  i++;
+}
+</pre>
+	<pre>
+// pasarlas como argumentos
+function Escuderia(marca1, marca2) {
+  marca1('Tesla', 'Roadster');
+  marca2('Honda', 'Type R');
+}
+
+Escuderia(ferrari, bmw);
+</pre>
+
+<pre>
+
+// Regresarlas de otras funciones
+function Indianapolis500(marca) {
+  console.log('Que imprime marca?\n' + marca);
+  console.log('Que longitud tiene marca? CARDINALIDAD #' + marca.length);
+  return marca;
+}
+
+let otroFerrari = Indianapolis500(ferrari);
+otroFerrari('SEAT', 'IBIZA');
+
+</pre>
+
+<pre>
             var numbers = [9, 1,2,8,4,7,10,3,6,5];
             numbers.sort(function(f,s){ // funcion anonima como argumento
                return f-s; 
             });
-            console.log("array ordenado: " + numbers);
-        </script>        
+            console.log(&quot;array ordenado: &quot; + numbers);
+        </pre>        
         
+<h1>Responses from code above</h1>
+
+
+ <pre>Carro Marca: Ferrari - Modelo: Lamborguini
+Carro Marca: BMW - Modelo: Serie 8
+Carro Marca: Ferrari - Modelo: Maserati
+Carro Marca: BMV - Modelo: BMV i
+Carro Marca: Marca0 - Modelo: Modelo0
+Carro Marca: Marca1 - Modelo: Modelo1
+Carro Marca: Tesla - Modelo: Roadster
+Carro Marca: Honda - Modelo: Type R
+Que imprime marca? function Marca(nombre, modelo) { console.log('Carro Marca: ' + nombre + ' - Modelo: ' + modelo); }
+Que longitud tiene marca? CARDINALIDAD #2
+Carro Marca: SEAT - Modelo: IBIZA
+array ordenado: 1,2,3,4,5,6,7,8,9,10</pre>
+	<p></p>
+	<p></p>
+	<p></p><div><br/>
+</div> 
+
     </body>
 
 </html>
