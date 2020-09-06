@@ -1,0 +1,79 @@
+﻿<html>
+    <body>
+        <h1>Parameters (arguments object)</h1>
+        
+        <p>
+Another unique aspect of JavaScript functions is that you can pass any
+number of parameters to any function without causing an error. That’s
+because function parameters are actually stored as an array-like structure
+called <b>arguments</b>.
+</p>
+	<ul><li>
+The arguments object is automatically available inside any function. </li>
+		<li>This
+means named parameters in a function exist mostly for convenience and
+don’t actually limit the number of arguments that a function can accept.</li>
+		<li>
+
+The arguments object is not an instance of Array and therefore doesn’t have the
+same methods as an array; <u>Array.isArray(arguments) always returns false.</u>
+</li></ul>
+	<p>
+On the other hand, JavaScript doesn’t ignore the named parameters
+of a function either. The <b>number</b> of arguments a function expects is stored
+on the<b> function’s length property.</b> Remember, a function is actually just an
+object, so it can have properties. The length property indicates the<b> function’s arity, </b>or the number of parameters it expects. Knowing the function’s
+arity is important in JavaScript because <i><code>functions won’t throw an error if
+you pass in too many or too few parameters</code></i></p>
+	<p>(see next code running here -&gt; <a href="https://playcode.io/664865">https://playcode.io/664865</a>)</p>
+	
+	<pre>
+function reflect(value) {
+ return value;
+}
+
+console.log(reflect(&quot;Hi!&quot;)); // &quot;Hi!&quot;
+console.log(reflect(&quot;Hi!&quot;, 25)); // &quot;Hi!&quot;
+console.log(reflect.length); // 1
+
+reflect = function() {
+ return arguments[0];
+};
+
+console.log(reflect(&quot;Hi!&quot;)); // &quot;Hi!&quot;
+console.log(reflect(&quot;Hi!&quot;, 25)); // &quot;Hi!&quot;
+console.log(reflect.length); // 0
+
+</pre><p>&nbsp;The version that uses the arguments object can be confusing because there
+are no named arguments, and you must read the body of the function to
+determine if arguments are used. That is why many developers prefer to
+avoid using arguments unless necessary.
+</p>
+	<p>
+Sometimes, however, using arguments is actually more effective than
+naming parameters</p>
+	
+	<pre>
+function sum() {
+    var result = 0, i = 0,  len = arguments.length;
+    while (i &lt; len) {
+      result += arguments[i];
+      i++;
+    }
+    return result;
+}
+
+
+console.log(sum(1, 2)); // 3
+console.log(sum(3, 4, 5, 6)); // 18
+console.log(sum(50)); // 50
+console.log(sum()); // 
+
+</pre>
+
+<p>&nbsp;</p><h1>References</h1>
+	<p>&nbsp;THE PRINCIPLES OF OBJECT-ORIENTED JAVASCRIPT. Copyright © 2014 by Nicholas C. Zakas</p>
+	<p></p>
+
+</body>
+</html>

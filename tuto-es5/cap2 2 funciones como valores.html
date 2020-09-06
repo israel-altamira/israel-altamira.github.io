@@ -16,7 +16,7 @@ use any other reference value. This makes JavaScript functions incredibly
 powerful. </li>
 		
 		</ul>
-	<p></p>
+	<p>(see next code running here -&gt; <a href="https://playcode.io/664865">https://playcode.io/664865</a>)</p>
 	
 	<pre>
 function Marca(nombre, modelo) {
@@ -35,7 +35,7 @@ bmw('BMW','Serie 8');
 </pre>
 	
         <pre>
-// Agregarlas a Objetos
+// Agregar las funciones a Objetos
 let escuderias = {
   ferrari: ferrari, 
   bmw: bmw
@@ -51,7 +51,7 @@ for(let escudo in escuderias) {
 }
 </pre>
 	<pre>
-// pasarlas como argumentos
+// pasar las funciones como argumentos
 function Escuderia(marca1, marca2) {
   marca1('Tesla', 'Roadster');
   marca2('Honda', 'Type R');
@@ -62,15 +62,15 @@ Escuderia(ferrari, bmw);
 
 <pre>
 
-// Regresarlas de otras funciones
+// Regresar las funciones de otras funciones
 function Indianapolis500(marca) {
   console.log('Que imprime marca?\n' + marca);
-  console.log('Que longitud tiene marca? CARDINALIDAD #' + marca.length);
+  console.log('Que longitud tiene marca? ARITY #' + marca.length);
   return marca;
 }
 
-let otroFerrari = Indianapolis500(ferrari);
-otroFerrari('SEAT', 'IBIZA');
+let otraMarca = Indianapolis500(ferrari);
+otraMarca('SEAT', 'IBIZA');
 
 </pre>
 
@@ -97,9 +97,9 @@ Que imprime marca? function Marca(nombre, modelo) { console.log('Carro Marca: ' 
 Que longitud tiene marca? CARDINALIDAD #2
 Carro Marca: SEAT - Modelo: IBIZA
 array ordenado: 1,2,3,4,5,6,7,8,9,10</pre>
-	<p></p>
-	<p></p>
-	<p></p><div><br/>
+	<h1>References</h1>
+	<p>
+THE PRINCIPLES OF OBJECT-ORIENTED JAVASCRIPT. Copyright © 2014 by Nicholas C. Zakas</p><div><br/>
 </div> 
 
     </body>

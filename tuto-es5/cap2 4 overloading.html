@@ -1,0 +1,56 @@
+﻿<html>
+    <body>
+        <h1>Overloading&nbsp;
+</h1><p>
+
+ Overloading: which is the
+ability of a single function to have multiple signatures.&nbsp;</p><ul>
+		<li>A function <b>signature</b>
+is made up of the<i> function name plus the number and type of parameters</i>
+the function expects &nbsp;</li>
+		<li>As mentioned previously, JavaScript functions can accept any number
+of parameters, and </li>
+		<li>the types of parameters a function takes aren’t specified at all. </li></ul>
+	
+	<p>That means JavaScript functions don’t actually have signatures.
+A lack of function signatures also means<b> a lack of function overloading.</b>
+Look at what happens when you try to declare two functions with the
+same name
+</p>
+	<p>(see next code running here -&gt; <a href="https://playcode.io/664865">https://playcode.io/664865</a>)</p>
+	
+	<pre>
+function sayMessage(message) {
+ console.log(message);
+}
+
+function sayMessage() {
+ console.log(&quot;Default message&quot;);
+}
+
+sayMessage(&quot;Hello!&quot;);    // outputs &quot;Default message&quot;
+
+
+
+</pre><p>&nbsp;
+ In JavaScript, however, when you define multiple functions with the same name, the one that appears last in your code wins.
+The earlier function declarations are completely removed, and the last
+is the one that is used. Once again, it helps to think about this situation
+using objects:
+
+</p>
+	
+	<pre>
+var sayMessage = new Function(&quot;message&quot;, &quot;console.log(message);&quot;);
+sayMessage = new Function(&quot;console.log(\&quot;Default message\&quot;);&quot;);
+sayMessage(&quot;Hello!&quot;); // outputs &quot;Default message&quot;
+
+
+</pre>
+
+<p>&nbsp;</p><h1>References</h1>
+	<p>&nbsp;THE PRINCIPLES OF OBJECT-ORIENTED JAVASCRIPT. Copyright © 2014 by Nicholas C. Zakas</p>
+	<p></p>
+
+</body>
+</html>
