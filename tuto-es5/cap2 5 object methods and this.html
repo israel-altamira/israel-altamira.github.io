@@ -1,0 +1,98 @@
+﻿<html>
+    <head>
+    </head>
+    <body>
+        
+	
+	<h1>Object Methods</h1><p>
+When a property value is actually a function, the
+property is considered a method.
+</p>
+	<p>You can add a method to an object in
+the same way that you would add a property.
+</p>
+	<pre>
+var person = {
+ name: &quot;Nicholas&quot;,
+ sayName: function() {
+ console.log(person.name);
+ }
+};
+
+person.sayName(); // outputs &quot;Nicholas&quot;\
+
+</pre><h1>The this Object</h1>
+        
+        
+        <p>
+You may have noticed something strange in the previous example. The
+sayName() method references <b>person.name</b> directly, which creates tight coupling between the method and the object. This is problematic for a number of reasons.&nbsp;</p>
+	<ul><li>First, if you change the variable name, you also need to
+remember to change the reference to that name in the method. </li>
+		<li>Second,
+this sort of tight coupling makes it difficult to use the same function for
+different objects. 
+</li></ul>
+
+	<p>
+Solution: Every scope in JavaScript has a <b>this</b> object that represents the calling object for the function. </p>
+	<ul><li>In the global scope, <b>this</b> represents the
+global object (window in web browsers). </li>
+		<li>When a function is called while
+attached to an object, the value of <b>this</b> is equal to that object by default. 
+</li></ul>
+
+
+	<pre>
+var person = {
+ 	name: &quot;Nicholas&quot;,
+ 	sayName: function() {
+ 		console.log(this.name);
+	}
+};
+
+person.sayName(); // outputs &quot;Nicholas&quot;
+
+
+</pre>
+        
+<p>
+This code works the same as the earlier version, but this time, <b>sayName</b>()
+references <b>this</b> instead of <b>person</b>. That means you can easily change the
+name of the variable or even reuse the function on different objects.
+</p>
+	
+	<pre>
+
+function sayNameForAll() {
+ 	console.log(this.name);
+}
+
+var person1 = {
+ 	name: &quot;Nicholas&quot;,
+ 	sayName: sayNameForAll
+};
+
+var person2 = {
+ 	name: &quot;Greg&quot;,
+ 	sayName: sayNameForAll
+};
+
+var name = &quot;Michael&quot;;
+
+person1.sayName(); // outputs &quot;Nicholas&quot;
+person2.sayName(); // outputs &quot;Greg&quot;
+sayNameForAll(); // outputs &quot;Michael&quot;
+
+
+</pre>
+	<p>
+When sayNameForAll() is called directly, it outputs &quot;Michael&quot; because the
+global variable is considered a property of the global object
+</p><h1>References</h1>
+	<p>&nbsp;THE PRINCIPLES OF OBJECT-ORIENTED JAVASCRIPT. Copyright © 2014 by Nicholas C. Zakas</p>
+	<p></p>
+        
+    </body>
+
+</html>
