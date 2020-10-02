@@ -4,11 +4,12 @@ El sitio tiene como objetivo explorar javascript/java atravez de ejemplos sencil
 
 
 ### Javascript ES5
-1. [go->](./sample.html) sample.html
-2. [go->](./tuto-es5/cap2 1_funciones declaradas vs expresiones.html) Declaraciones de fn's vs Fn's como expresiones
-3. [go->](./tuto-es5/cap2 2_funciones como valores.html) Fn's como valores
-4. [go->](./tuto-es5/cap2 3 parametros y argument.html) parametros de fn's
-5. [go->](./tuto-es5/cap2 4 overloading.html) Overloading
+1. [Declaraciones de fn's vs Fn's como expresiones](./tuto-es5/cap2 1 funciones declaradas vs expresiones.html)
+2. [Fn's como valores](./tuto-es5/cap2 2 funciones como valores.html)
+3. [parametros de fn's](./tuto-es5/cap2 3 parametros y argument.html) 
+4. [Overloading](./tuto-es5/cap2 4 overloading.html)
+5. [Metodos de Objetos y THIS object](./tuto-es5/cap2 5 object methods and this.html)
+
 
 ### Angular
 1. Component instantiaton/destruction (constructor, ngOnInit, ngOnDestroy)
