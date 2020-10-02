@@ -13,7 +13,7 @@ El sitio tiene como objetivo explorar javascript/java atravez de ejemplos sencil
 
 ### Angular
 1. Component instantiaton/destruction (constructor, ngOnInit, ngOnDestroy)
-2 .  performance: part 4, [go->](https://blog.ninja-squad.com/2018/09/27/angular-performances-part-4/#:~:text=Angular%20offers%20another%20change%20detection,of%20the%20inputs%20changes)%3B) OnPush Strategy
+2. performance: part 4, [go->](https://blog.ninja-squad.com/2018/09/27/angular-performances-part-4/) OnPush Strategy
 
 ### Maquetas de proximas aplicaciones:
 1. [Sistema de Administracion de Personal](./sysvac/login.html) - modulo de vacaciones 
