@@ -2,7 +2,7 @@
 [https://www.pluralsight.com/courses/agile-estimation](https://www.pluralsight.com/courses/agile-estimation)
 
 Next images are a kind of summary of what was most important to me.
-No doubt I need to review this again several times until memorize everything, but this concepts started to change my mind about what is an estimation: started to embrace aproximation concept, size for estimation, negotiation and concept of cone of uncertainty.
+No doubt I need to review this again several times until memorize everything, but this concepts started to change my mind about what is an estimation: embracing aproximation concept, size for estimation, negotiation and concept of cone of uncertainty.
 Thank you so much to UST-global as this course was patrocined by them.
 
 1. ![1](./2%201.jpg)
