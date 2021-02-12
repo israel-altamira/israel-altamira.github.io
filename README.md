@@ -13,7 +13,11 @@ El sitio tiene como objetivo explorar js/java (y frameworks relacionados) atrave
 
 ### Angular
 <!-- 1. Component instantiaton/destruction (constructor, ngOnInit, ngOnDestroy) -->
-1. performance: part 4, [go->](https://blog.ninja-squad.com/2018/09/27/angular-performances-part-4/) OnPush Strategy
+1. [Angular Performances Part 4 - Change detection strategies](https://blog.ninja-squad.com/2018/09/27/angular-performances-part-4/) OnPush Strategy
+
+### Agile
+
+1. [Agile Estimation](./pub/_agile_estimations/summary.md)
 
 ### Maquetas de proximas aplicaciones:
 <!-- 1. [Sistema de Administracion de Personal](./sysvac/login.html) - modulo de vacaciones --> 
