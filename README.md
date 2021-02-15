@@ -17,7 +17,7 @@ El sitio tiene como objetivo explorar js/java (y frameworks relacionados) atrave
 
 
 ### Agile
-1. [Agile Estimation](./pub/agile_estimations/summary.md) my summary of curse from pluralsight.
+1. Evidence of [Agile Estimation](./pub/agile_estimations/summary.md) course.
 
 
 ### Maquetas de proximas aplicaciones:
