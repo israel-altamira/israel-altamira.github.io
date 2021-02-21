@@ -4,11 +4,11 @@ El sitio tiene como objetivo explorar js/java (y frameworks relacionados) atrave
 
 
 ### Javascript ES5
-1. [Declaraciones de fn\'s vs Fn\'s como expresiones](./beta/tuto-es5/cap2 1 funciones declaradas vs expresiones.html)
-2. [Fn's como valores](./beta/tuto-es5/cap2 2 funciones como valores.html)
-3. [parametros de fn's](./beta/tuto-es5/cap2 3 parametros y argument.html) 
-4. [Overloading](./beta/tuto-es5/cap2 4 overloading.html)
-5. [Metodos de Objetos y THIS object](./beta/tuto-es5/cap2 5 object methods and this.html)
+1. [Declaraciones de Fn's vs Fn's como expresiones](./beta/tuto-es5/cap2%201%20funciones%20declaradas%20vs%20expresiones.html)
+2. [Fn's como valores](./beta/tuto-es5/cap2%202%20funciones%20como%20valores.html)
+3. [Parametros de Fn's](./beta/tuto-es5/cap2%203%20parametros%20y%20argument.html) 
+4. [Overloading](./beta/tuto-es5/cap2%204%20overloading.html)
+5. [Metodos de Objetos y THIS object](./beta/tuto-es5/cap2%205%20object%20methods%20and%20this.html)
 
 
 ### Angular
