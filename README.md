@@ -1,10 +1,10 @@
 ## Bienvenido
 
-El sitio tiene como objetivo explorar js/java (y frameworks relacionados) atravez de ejemplos cada vez en mayor numero y en diferentes situaciones. Ademas personalmente el sitio me ayuda a llevar cierto registro de las cosas que he ido estudiando atravez del tiempo  :P.
+El sitio tiene como objetivo explorar js/java (y frameworks relacionados) atravez de ejemplos.
 
 
 ### Javascript ES5
-1. [Declaraciones de fn's vs Fn's como expresiones](./beta/tuto-es5/cap2 1 funciones declaradas vs expresiones.html)
+1. [Declaraciones de fn\'s vs Fn\'s como expresiones](./beta/tuto-es5/cap2 1 funciones declaradas vs expresiones.html)
 2. [Fn's como valores](./beta/tuto-es5/cap2 2 funciones como valores.html)
 3. [parametros de fn's](./beta/tuto-es5/cap2 3 parametros y argument.html) 
 4. [Overloading](./beta/tuto-es5/cap2 4 overloading.html)
@@ -13,11 +13,11 @@ El sitio tiene como objetivo explorar js/java (y frameworks relacionados) atrave
 
 ### Angular
 <!-- 1. Component instantiaton/destruction (constructor, ngOnInit, ngOnDestroy) -->
-1. [Angular Performances Part 4 - Change detection strategies](https://blog.ninja-squad.com/2018/09/27/angular-performances-part-4/) OnPush Strategy.
+1. LINK: [Angular Performances Part 4 - Change detection strategies](https://blog.ninja-squad.com/2018/09/27/angular-performances-part-4/) OnPush Strategy.
 
 
-### Agile
-1. Evidence of [Agile Estimation](./pub/agile_estimations/summary.md) course.
+### Evidences
+1. \[Agile\] Evidence of [Agile Estimation](./pub/agile_estimations/summary.md) course.
 
 
 ### Maquetas de proximas aplicaciones:
