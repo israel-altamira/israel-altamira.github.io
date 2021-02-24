@@ -2,18 +2,18 @@
 ### VideoTutorial 4 del Taller Práctico de Java Server Faces. Reglas de Navegación.
 
 
-4 01
-4 02 01
-4 02 02
-4 03 01
-4 03 02
-4 04 01
-4 04 02
-4 05 01
-4 05 02
-4 06 01
-4 06 02
-4 06 03
-4 06 04
-4 06 05
+<img src="./4%2001.png" width="500" />
+<img src="./4%2002%2001.png" width="500" />
+<img src="./4%2002%2002.png" width="500" />
+<img src="./4%2003%2001.png" width="500" />
+<img src="./4%2003%2002.png" width="500" />
+<img src="./4%2004%2001.png" width="500" />
+<img src="./4%2004%2002.png" width="500" />
+<img src="./4%2005%2001.png" width="500" />
+<img src="./4%2005%2002.png" width="500" />
+<img src="./4%2006%2001.png" width="500" />
+<img src="./4%2006%2002.png" width="500" />
+<img src="./4%2006%2003.png" width="500" />
+<img src="./4%2006%2004.png" width="500" />
+<img src="./4%2006%2005.png" width="500" />
 
