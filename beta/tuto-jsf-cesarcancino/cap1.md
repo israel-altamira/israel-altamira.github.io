@@ -1,6 +1,12 @@
 
 ## VideoTutorial 1 del Taller Práctico de Java Server Faces. Introducción y hola mundo.
 
+- what is java server face
+- features of JSF
+- arquitechture of JSF
+- mvc pattern
+- start a new project
+
 <img src="./1%2001.png" width="500" />
 <img src="./1%2002.png" width="500" />
 <img src="./1%2003.png" width="500" />
