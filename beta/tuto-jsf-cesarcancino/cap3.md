@@ -1,7 +1,6 @@
 
 ## VideoTutorial 3 del Taller Práctico de Java Server Faces. Facelets Template en JSF.
 
-<img src="./1%2001.png" width="500" />
 <img src="./3%2001.png" width="500" />
 <img src="./3%2002%2001.png" width="500" />
 <img src="./3%2002%2002.png" width="500" />
