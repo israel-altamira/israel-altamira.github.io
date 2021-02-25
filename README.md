@@ -18,7 +18,7 @@ El sitio tiene como objetivo explorar js/java (y frameworks relacionados) atrave
 
 ### Evidences
 1. \[Agile\] Evidence of [Agile Estimation](./pub/agile_estimations/summary.md) course.
-2. \[JSF\] Free [Course of Java Server Faces](./beta/tuto-jsf-cesarcancino/tuto-jsf.md) from cesarcancino.com
+2. \[JSF\] Free [Course of Java Server Faces](./pub/tuto-jsf-cesarcancino/tuto-jsf.md) from cesarcancino.com
 
 ### Maquetas de proximas aplicaciones:
 <!-- 1. [Sistema de Administracion de Personal](./sysvac/login.html) - modulo de vacaciones --> 
